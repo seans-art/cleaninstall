@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sean O&#39;Brien Paintings &amp; Illustrations</title>
+    <link>https://seanobrien.art/</link>
+    <description>Recent content on Sean O&#39;Brien Paintings &amp; Illustrations</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 13 May 2021 12:42:14 -0700</lastBuildDate><atom:link href="https://seanobrien.art/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Family Portraits</title>
+      <link>https://seanobrien.art/post/family-portraits/</link>
+      <pubDate>Thu, 13 May 2021 12:42:14 -0700</pubDate>
+      
+      <guid>https://seanobrien.art/post/family-portraits/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pet Portraits</title>
+      <link>https://seanobrien.art/post/pet-portraits/</link>
+      <pubDate>Thu, 13 May 2021 12:42:14 -0700</pubDate>
+      
+      <guid>https://seanobrien.art/post/pet-portraits/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fan &amp; Pop Art</title>
+      <link>https://seanobrien.art/post/pop-art/</link>
+      <pubDate>Sun, 02 May 2021 12:42:14 -0700</pubDate>
+      
+      <guid>https://seanobrien.art/post/pop-art/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Notable Projects</title>
+      <link>https://seanobrien.art/post/other-projects/</link>
+      <pubDate>Sat, 01 May 2021 12:42:14 -0700</pubDate>
+      
+      <guid>https://seanobrien.art/post/other-projects/</guid>
+      <description>The quick brown fox jumped over the lazy dog.</description>
+    </item>
+    
+  </channel>
+</rss>

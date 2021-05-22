@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors on Sean O&#39;Brien Paintings &amp; Illustrations</title>
+    <link>https://seanobrien.art/authors/</link>
+    <description>Recent content in Authors on Sean O&#39;Brien Paintings &amp; Illustrations</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 13 May 2021 12:42:14 -0700</lastBuildDate><atom:link href="https://seanobrien.art/authors/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sean O&#39;Brien</title>
+      <link>https://seanobrien.art/authors/sean-obrien/</link>
+      <pubDate>Thu, 13 May 2021 12:42:14 -0700</pubDate>
+      
+      <guid>https://seanobrien.art/authors/sean-obrien/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
