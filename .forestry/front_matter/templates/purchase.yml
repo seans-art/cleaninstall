@@ -2,15 +2,14 @@
 label: Purchase
 hide_body: false
 fields:
+- name: sku
+  type: text
+  config:
+    required: false
+  label: SKU
 - type: text
   name: title
   label: title
-- type: datetime
-  name: date
-  label: date
 - type: file
   name: hero
   label: hero
-- type: list
-  name: authors
-  label: authors
