@@ -1,1 +1,13 @@
-<h1>this is the product list.</h1>
+<h1 style="margin-top: 10%; text-align: center;">Select a canvas size:</h1>
+<div class="product-container" style="display: flex; flex-wrap: wrap; justify-content: center; margin-bottom: 10%">
+{{ range .Pages }}
+    <div style="flex-grow: 1; width: 31%; height: 20%; margin: 1%">
+        <div style="text-align: center;">
+            <a href="{{.Permalink}}">
+                <img style="max-height: 450px; display: inline-block;" src="{{ .Page.Params.hero }}" >
+            </a>
+        </div>
+        <a href="{{.Permalink}}" style="text-decoration: none;"><h3 style="text-align: center;">{{ .Title }}</h3></a>
+    </div>
+{{ end }}
+</div>
