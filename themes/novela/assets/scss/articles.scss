@@ -121,6 +121,13 @@
   }
 }
 
+input[type="radio"]:checked + label section {
+  border: royalblue 3px solid;
+  border-radius: 20%;
+  margin: -7px 50px;
+  padding: 7px 0 0 0;
+}
+
 .grid-button{
     position: relative;
     display: -webkit-box;
