@@ -1,0 +1,47 @@
+<html>
+
+{{ partial "head/head.html" . }}
+
+<body class="line-numbers">
+    <!-- Config -->
+    <div
+      id="clayer-config"
+      data-base-url="https://self.commercelayer.io"
+      data-client-id="r22xcbeSlfnB6ZyWjxJ8Zpva2LZ7P4dk1hHA4i238qY"
+      data-market-id="4700"
+      data-country-code="US"
+      data-language-code="en"
+      data-cart-url="https://seanobrien.art/cart"
+      data-return-url="https://seanobrien.art/return"
+      data-privacy-url="https://seanobrien.art/privacy"
+      data-terms-url="https://seanobrien.art/terms"
+      data-dev-settings-debug="true"
+      data-dev-settings-console="true"
+      data-dev-settings-trace="true"
+    ></div>
+
+    {{ $script := resources.Get "js/initColors.js" }}
+    <script src="{{ $script.RelPermalink }}"></script>
+
+    <div class="layout-styled">
+
+        {{ partial "header.html" . }}
+
+        {{ block "main" . }}
+        
+        {{ end }}
+        
+        {{ partial "footer.html" . }}
+
+    </div>
+
+    {{ $script := resources.Get "js/prism.js" }}
+    <script src="{{ $script.RelPermalink }}"></script>
+    <!-- JS Library -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@commercelayer/js-dropin@1.5.1/dist/commercelayer.min.js"
+    ></script>
+</body>
+
+</html>

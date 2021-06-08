@@ -6,7 +6,6 @@ hero: ../../images/tank.jpg
 authors: 
     - Sean O'Brien
 ---
-
 ![madtv.jpg](../../images/madtv.jpg)
 ![chucky.jpg](../../images/chucky.jpg)
 
