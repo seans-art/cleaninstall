@@ -19,7 +19,7 @@
                 <h3 style="text-align: center; font-size: 14px;">Please select a style:</h3>
 
                 <div class="price-2col" style="width: 46%; flex-grow: 1; margin: 5% 1%">
-                    <input type="radio" id="radio-price1" name="radio-price" style="display:none;"  />
+                    <input class="clayer-variant" data-sku-code="{{ .Page.Params.product }}BW" type="radio" id="radio-price1" name="radio-price" style="display:none;"  />
                     <label for="radio-price1">
                         <section>
                             <div id="logo-desktop" style="display: flex; justify-content: center; margin-bottom: 5%;">
@@ -35,7 +35,7 @@
                     </label>               
                 </div>
                 <div class="price-2col" style="width: 46%; flex-grow: 1; margin: 5% 1%">
-                    <input type="radio" id="radio-price2" name="radio-price" style="display:none;" />
+                    <input class="clayer-variant" data-sku-code="{{ .Page.Params.product }}FC" type="radio" id="radio-price2" name="radio-price" style="display:none;" />
                     <label for="radio-price2">
                         <section>
                             <div style="display: flex; justify-content: center; margin-bottom: 5%;">
@@ -51,7 +51,10 @@
                     </label>                 
                 </div>
             </div>
+            <!-- Add to bag quantity (optional) -->
             <div style="text-align:center;">
+                
+                <!-- Add to bag button -->
                 <button style="  background-color: royalblue; /* Green */
                 border: none;
                 color: white;
@@ -59,14 +62,85 @@
                 align-items: center;
                 text-decoration: none;
                 display: inline-block;
-                font-size: 16px;">
+                font-size: 16px;"
+                href="#"
+                class="clayer-add-to-bag"
+                data-sku-code="{{ .Page.Params.product }}BW"
+                data-sku-name="{{ .Page.Params.title }}"
+                data-sku-reference="Any reference"
+                data-sku-image-url="{{ .Page.Params.hero }}"
+                data-availability-message-container-id="availability-message"
+                >
                     Add to Cart
                 </button>
-            </div>    
+                <a
+                    href="#"
+                    class="clayer-add-to-bag"
+                    data-sku-code="{{ .Page.Params.product }}BW"
+                    data-sku-name="{{ .Page.Params.title }}"
+                    data-sku-reference="Any reference"
+                    data-availability-message-container-id="availability-message-BABYONBU000000E63E74NBXX"
+                >Link</a>
+            </div>   
         </section>
     </div>
     <div style="width: 100%; margin: 5% 1%;">
         <span style="font-size: 18px; color: grey;">All portraits feature up to two subjects and a simple background, with options to include subjects or detail rich backgrounds for an additional fee. All items are shipped free of charge within the United States. Since this is a custom item, made to order, all sales are final once work begins.</span>
     </div>
+    <!-- Shopping Bag -->
+
+    <div id="clayer-shopping-bag-container">
+      <table class="table is-fullwidth">
+        <thead>
+          <tr>
+            <th colspan="2">SKU</th>
+            <th>Reference</th>
+            <th>Unit price</th>
+            <th>Qty</th>
+            <th>Total</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="clayer-shopping-bag-items-container">
+        </tbody> 
+        <template id="clayer-shopping-bag-item-template">
+          <tr>
+            <td>
+              <img class="clayer-shopping-bag-item-image"></img>
+            </td>
+            <td class="clayer-shopping-bag-item-name"></td>
+            <td class="clayer-shopping-bag-item-reference"></td>
+            <td class="clayer-shopping-bag-item-unit-amount"></td>
+            <td class="clayer-shopping-bag-item-qty-container">
+              <!-- The unavailable message template is appended to the element
+                    below if customer selects a quantity that is not available  -->
+              <span class="clayer-shopping-bag-item-availability-message-container"></span>
+            </td>
+            <td class="clayer-shopping-bag-item-total-amount"></td>
+            <td>
+              <a href="#" class="clayer-shopping-bag-item-remove">remove</a>
+            </td>
+          </tr>
+        </template>
+      </table>
+
+      <table class="table is-fullwidth">
+        <tr>
+          <td>Subtotal</td>
+          <td class="clayer-shopping-bag-subtotal"></td>
+        </tr>
+        <tr>
+          <td>Shipping</td>
+          <td class="clayer-shopping-bag-shipping"></td>
+        </tr>
+        <tr>
+          <td>Total</td>
+          <td class="clayer-shopping-bag-total"></td>
+        </tr>
+      </table>
+    </div>
+    <!-- Checkout button -->
+    <a href="#" class="clayer-shopping-bag-checkout">Proceed to checkout</a>
 </section>
+
 {{ end }}

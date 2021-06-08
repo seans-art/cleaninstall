@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="/images/paint-favicon.png">
     
-    <link rel="stylesheet" href="/scss/global.min.e9be58e9dfa48a909d6d504a3554c3eead73196e4439c014e4d0d5d53f65c8f9.css">
+    <link rel="stylesheet" href="/scss/global.min.0833025f259c63a7286bb14349a88dcbe5cca1035cf7ba5535652d26249a69c4.css">
     
     <link rel="stylesheet" href="/css/prism.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -141,26 +141,36 @@
                 <h3 style="text-align: center; font-size: 14px;">Please select a style:</h3>
 
                 <div class="price-2col" style="width: 46%; flex-grow: 1; margin: 5% 1%">
-                    <div id="logo-desktop" style="display: flex; justify-content: center; margin-bottom: 5%;">
-                        
-                        <img src="../../images/checkerboard.svg" style="width: 75px;">
-                    </div>
-                    <h4 style="text-align:center;">Black & White:</h4>
-                    <div class="clayer-price" data-sku-code="08x10BW">
-                        <h6 class="amount" style="text-align: center;"></h6>
-                        <h6 class="compare-at-amount" style="text-align: center;"></h6>
-                    </div>                
+                    <input type="radio" id="radio-price1" name="radio-price" style="display:none;"  />
+                    <label for="radio-price1">
+                        <section>
+                            <div id="logo-desktop" style="display: flex; justify-content: center; margin-bottom: 5%;">
+                                
+                                <img src="../../images/checkerboard.svg" style="width: 75px;">
+                            </div>
+                            <h4 style="text-align:center;">Black & White:</h4>
+                            <div class="clayer-price" data-sku-code="08x10BW">
+                                <h6 class="amount" style="text-align: center;"></h6>
+                                <h6 class="compare-at-amount" style="text-align: center;"></h6>
+                            </div>
+                        </section>
+                    </label>               
                 </div>
                 <div class="price-2col" style="width: 46%; flex-grow: 1; margin: 5% 1%">
-                    <div style="display: flex; justify-content: center; margin-bottom: 5%;">
-                        <img src="../../images/colorwheel.svg" style="width: 75px;">
-                    </div>
-                    <h4 style="text-align: center;">Full Color:</h4>
-                    
-                    <div class="clayer-price" data-sku-code="08x10FC">
-                        <h6 class="amount" style="text-align: center;"></h6>
-                        <h6 class="compare-at-amount" style="text-align: center;"></h6>
-                    </div>                
+                    <input type="radio" id="radio-price2" name="radio-price" style="display:none;" />
+                    <label for="radio-price2">
+                        <section>
+                            <div style="display: flex; justify-content: center; margin-bottom: 5%;">
+                                <img src="../../images/colorwheel.svg" style="width: 75px;">
+                            </div>
+                            <h4 style="text-align: center;">Full Color:</h4>
+                            
+                            <div class="clayer-price" data-sku-code="08x10FC">
+                                <h6 class="amount" style="text-align: center;"></h6>
+                                <h6 class="compare-at-amount" style="text-align: center;"></h6>
+                            </div>
+                        </section>
+                    </label>                 
                 </div>
             </div>
             <div style="text-align:center;">
@@ -178,7 +188,7 @@
         </section>
     </div>
     <div style="width: 100%; margin: 5% 1%;">
-        <span style="font-size: 18px; color: grey;">This portrait features up to two subjects and a simple background, with options to include subjects or detail rich backgrounds for an additional fee. All items are shipped free of charge within the United States. Since this is a custom item, made to order, all sales are final.</span>
+        <span style="font-size: 18px; color: grey;">All portraits feature up to two subjects and a simple background, with options to include subjects or detail rich backgrounds for an additional fee. All items are shipped free of charge within the United States. Since this is a custom item, made to order, all sales are final once work begins.</span>
     </div>
 </section>
 
