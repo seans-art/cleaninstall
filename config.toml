@@ -15,3 +15,6 @@ instagram = "https://www.instagram.com/seanosmo/"
 
 [taxonomies]
 author = "authors"
+
+[tracking]
+googleTagManager = "GTM-PXPCG24"
