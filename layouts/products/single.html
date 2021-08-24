@@ -139,8 +139,27 @@
         </tr>
       </table>
     </div>
+
+    <script>
+      // find this user's order ID to attach to an image later
+      function getOrderId() {
+        let userOrderId;
+        let orderLink = document.querySelector("#articleHero > a");
+        if (orderLink){
+          let orderQueryString = orderLink.href.split("?");
+          if (orderQueryString && orderQueryString.length > 1){
+            let orderId = orderQueryString[1].split("=");
+            if (orderId && orderId.length > 1){
+              userOrderId = orderId[1];
+              document.getElementById("userOrderId").innerText=userOrderId;
+              return userOrderId;
+            }
+          }
+        }        
+      }
+    </script>
     <!-- Checkout button -->
-    <a href="#" class="clayer-shopping-bag-checkout">Proceed to checkout</a>
+    <a href="#" class="clayer-shopping-bag-checkout" onload="getOrderId()">Proceed to checkout</a>
 </section>
 
 {{ end }}
