@@ -4,6 +4,16 @@
     "description": "My portfolio",
     "private": true,
     "scripts": {
-        "build": "hugo --cleanDestinationDir"
+        "build": "hugo --cleanDestinationDir",
+        "hugo-server": "hugo server --disableFastRender",
+        "webpack": "webpack"
+    },
+    "devDependencies": {
+        "webpack": "^5.52.0",
+        "webpack-cli": "^4.8.0"
+    },
+    "dependencies": {
+        "axios": "^0.21.4",
+        "lunr": "^2.3.9"
     }
 }

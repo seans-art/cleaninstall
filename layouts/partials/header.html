@@ -22,6 +22,9 @@
 </div>
 </Section>
 
+{{ $webpack := resources.Get "js/index.js" | minify | fingerprint }}
+<script src="{{ $webpack.RelPermalink }}">console.log('$webpack variable looking at path: ' . $webpack);</script>
+
 {{ $script := resources.Get "js/toggleLogos.js" }}
 <script src="{{ $script.RelPermalink }}"></script>
 
