@@ -126,77 +126,60 @@
         
 <section class="section narrow">
     <section>
-        
-<script src="/js/uploadcare.js"></script>
+        <div class="product-container" style="margin-bottom: 10%">
 
-<h1>Step 1: Upload a photo!</h1>
-<div>
-    <img>
-</div>
+<h3 style="margin: 30px 0;">Step 1: Upload a photo!</h3>
 <input
 type="hidden"
 role="uploadcare-uploader"
 data-images-only="true"
 data-preview-step="true" />
 
-<h1 style="margin-top: 10%; text-align: center;">Select a canvas size:</h1>
-<div class="product-container" style="display: flex; flex-wrap: wrap; justify-content: center; margin-bottom: 10%">
+<h3 style="margin: 30px 0;">Step 2: Choose a size</h3>
+<img 
+src="../../images/canvas-ref.jpg"
+style="width: 45%;">
 
-    <div style="flex-grow: 1; width: 31%; height: 20%; margin: 1%">
-        <div style="text-align: center;">
-            <a href="https://seanobrien.art/products/08x10/">
-                <img style="max-height: 450px; display: inline-block;" src="../../images/canvas-ref.jpg" >
-            </a>
-        </div>
-        <a href="https://seanobrien.art/products/08x10/" style="text-decoration: none;"><h3 style="text-align: center;">08 x 10 Inch Portrait</h3></a>
-    </div>
+    <form id="portrait-form">
+        <select
+        required 
+        name="size-select"
+        style="margin-top: 20px; width: 45%">
+            <option disabled hidden selected>Select canvas size</option>
+            <option value=”08x10”>8" width X 10" height</option>
+            <option value=”09x12”>9" width X 12" height</option>
+            <option value=”11x14”>11" width X 14" height</option>
+            <option value=”12x16”>12" width X 16" height</option>
+            <option value="16x20">16" width X 20" height</option>"
+        </select>
 
-    <div style="flex-grow: 1; width: 31%; height: 20%; margin: 1%">
-        <div style="text-align: center;">
-            <a href="https://seanobrien.art/products/09x12/">
-                <img style="max-height: 450px; display: inline-block;" src="../../images/canvas-ref.jpg" >
-            </a>
+        <div style="margin-bottom: 20px;">
+        <h3 style="margin:20px 0;">Step 3: Select Black & White or Full Color</h3>
+        <input type="radio" id="BW" name="style-select" value="BW" required>
+        <label for="BW">Black & White</label><br>
+        <input type="radio" id="FC" name="style-select" value="FC">
+        <label for="FC">Full Color</label><br>
         </div>
-        <a href="https://seanobrien.art/products/09x12/" style="text-decoration: none;"><h3 style="text-align: center;">09 x 12 Inch Portrait</h3></a>
-    </div>
+        
+    </form>
 
-    <div style="flex-grow: 1; width: 31%; height: 20%; margin: 1%">
-        <div style="text-align: center;">
-            <a href="https://seanobrien.art/products/11x14/">
-                <img style="max-height: 450px; display: inline-block;" src="../../images/canvas-ref.jpg" >
-            </a>
-        </div>
-        <a href="https://seanobrien.art/products/11x14/" style="text-decoration: none;"><h3 style="text-align: center;">11 x 14 Inch Portrait</h3></a>
-    </div>
-
-    <div style="flex-grow: 1; width: 31%; height: 20%; margin: 1%">
-        <div style="text-align: center;">
-            <a href="https://seanobrien.art/products/12x16/">
-                <img style="max-height: 450px; display: inline-block;" src="../../images/canvas-ref.jpg" >
-            </a>
-        </div>
-        <a href="https://seanobrien.art/products/12x16/" style="text-decoration: none;"><h3 style="text-align: center;">12 x 16 Inch Portrait</h3></a>
-    </div>
-
-    <div style="flex-grow: 1; width: 31%; height: 20%; margin: 1%">
-        <div style="text-align: center;">
-            <a href="https://seanobrien.art/products/16x20/">
-                <img style="max-height: 450px; display: inline-block;" src="../../images/canvas-ref.jpg" >
-            </a>
-        </div>
-        <a href="https://seanobrien.art/products/16x20/" style="text-decoration: none;"><h3 style="text-align: center;">16 x 20 Inch Portrait</h3></a>
-    </div>
-
-    <div style="flex-grow: 1; width: 31%; height: 20%; margin: 1%">
-        <div style="text-align: center;">
-            <a href="https://seanobrien.art/products/18x24/">
-                <img style="max-height: 450px; display: inline-block;" src="../../images/canvas-ref.jpg" >
-            </a>
-        </div>
-        <a href="https://seanobrien.art/products/18x24/" style="text-decoration: none;"><h3 style="text-align: center;">18 x 24 Inch Portrait</h3></a>
-    </div>
+    <a
+    submit
+    href="#"
+    class="clayer-add-to-bag"
+    data-sku-code="BW"
+    data-sku-name=""
+    data-sku-reference="Any reference"
+    data-availability-message-container-id="availability-message-BABYONBU000000E63E74NBXX"
+    >Add to Cart</a>
 
 </div>
+
+
+
+
+
+<script src="/js/uploadcare.js"></script>
     </section>
 </section>
 

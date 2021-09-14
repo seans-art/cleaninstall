@@ -21,14 +21,12 @@ let sizeChoice;
 let styleChoice;
 
 document.getElementsByName('size-select')[0].addEventListener('onChange', function() {
-    let size = document.getElementsByName('size-select')[0].value;
-    sizeChoice = size;
+    let sizeChoice = document.getElementsByName('size-select')[0].value;
     console.log(sizeChoice);
 });
 
 document.getElementsByName('style-select')[0].addEventListener('onChange', function() {
-    let style = document.getElementsByName('style-select')[0].value;
-    styleChoice = style;
+    let styleChoice = document.querySelector('input[name="style-select"]:checked').value;
     console.log(styleChoice);
 });
 
