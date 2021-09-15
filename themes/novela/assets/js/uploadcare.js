@@ -18,19 +18,32 @@ window.addEventListener('load', function() {
 
 // TODO: put a null default for both options
 let sizeChoice;
-let styleChoice;
+function selectSize(){
+    let size = document.getElementsByName('size-select')[0].value;
+    console.log(size);
+    sizeChoice = size;
+    return sizeChoice;
+}
+document.getElementsByName('size-select')[0].onchange = selectSize;
 
-document.getElementsByName('size-select')[0].addEventListener('onChange', function() {
-    let sizeChoice = document.getElementsByName('size-select')[0].value;
-    console.log(sizeChoice);
-});
+// Get value from Radio Selectors
+// document.getElementsByName('color-select');
+// document.getElementsByName('color-select')[0].value;
+// document.querySelector('input[name="color-select"]:checked').value;
+let colorList = document.getElementsByName('color-select');
+let previous = null;
+let colorChoice;
+for (let i = 0; i < colorList.length; i++) {
+    colorList[i].addEventListener('change', function() {
+        if (this !== previous) {
+            previous = this;
+        }
+        console.log("current value is: " + this.value)
+        colorChoice = this.value;
+    });
+}
 
-document.getElementsByName('style-select')[0].addEventListener('onChange', function() {
-    let styleChoice = document.querySelector('input[name="style-select"]:checked').value;
-    console.log(styleChoice);
-});
-
-let dataSkuCode = sizeChoice + styleChoice;
+let dataSkuCode = sizeChoice + scolorChoice;
 let btnAddToOrder = document.getElementById('add-to-order');
 if (dataSkuCode){
     document.getElementById('add-to-order').setAttribute('data-sku-code', dataSkuCode);

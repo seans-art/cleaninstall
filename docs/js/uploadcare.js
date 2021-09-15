@@ -20,16 +20,26 @@ window.addEventListener('load', function() {
 let sizeChoice;
 let styleChoice;
 
-document.getElementsByName('size-select')[0].addEventListener('onChange', function() {
+function selectSize(){
     let size = document.getElementsByName('size-select')[0].value;
-    sizeChoice = size;
-    console.log(sizeChoice);
-});
+    console.log(size);
+    return size;
+}
+document.getElementsByName('size-select')[0].onchange = selectSize;
 
-document.getElementsByName('style-select')[0].addEventListener('onChange', function() {
-    let style = document.getElementsByName('style-select')[0].value;
-    styleChoice = style;
-    console.log(styleChoice);
+function selectColor(){
+    let style = document.querySelector('input[name="color-select"]:checked').value;
+    console.log(style);
+    return style;
+}
+document.getElementsByName('color-select')[0].onchange = selectColor;
+document.getElementsByName('color-select')[1].onchange = selectColor;
+
+// first instance of color picker
+document.getElementsByName('color-select')[0].addEventListener('onChange', function() {
+    let style = document.querySelector('input[name="color-select"]:checked').value;
+    console.log(style);
+    return style;
 });
 
 let dataSkuCode = sizeChoice + styleChoice;
