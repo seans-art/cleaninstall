@@ -18,31 +18,41 @@ window.addEventListener('load', function() {
 
 // TODO: put a null default for both options
 let sizeChoice;
-let styleChoice;
-
 function selectSize(){
     let size = document.getElementsByName('size-select')[0].value;
     console.log(size);
-    return size;
+    sizeChoice = size;
+    return sizeChoice;
 }
 document.getElementsByName('size-select')[0].onchange = selectSize;
 
-function selectColor(){
-    let style = document.querySelector('input[name="color-select"]:checked').value;
-    console.log(style);
-    return style;
+// Get value from Radio Selectors
+// document.getElementsByName('color-select');
+// document.getElementsByName('color-select')[0].value;
+// document.querySelector('input[name="color-select"]:checked').value;
+let colorList = document.getElementsByName('color-select');
+let previous = null;
+let colorChoice;
+for (let i = 0; i < colorList.length; i++) {
+    colorList[i].addEventListener('change', function() {
+        if (this !== previous) {
+            previous = this;
+        }
+        console.log("current value is: " + this.value)
+        colorChoice = this.value;
+    });
 }
-document.getElementsByName('color-select')[0].onchange = selectColor;
-document.getElementsByName('color-select')[1].onchange = selectColor;
 
-// first instance of color picker
-document.getElementsByName('color-select')[0].addEventListener('onChange', function() {
-    let style = document.querySelector('input[name="color-select"]:checked').value;
-    console.log(style);
-    return style;
-});
+let dataSkuCode;
+function getSku() {
+    if(colorChoice && sizeChoice){
+        console.log(colorChoice.value);
+        console.log(sizeChoice.value);
+    } else {
+        console.log ("one or more values is not set");
+    }
+}
 
-let dataSkuCode = sizeChoice + styleChoice;
 let btnAddToOrder = document.getElementById('add-to-order');
 if (dataSkuCode){
     document.getElementById('add-to-order').setAttribute('data-sku-code', dataSkuCode);
