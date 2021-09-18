@@ -127,22 +127,64 @@
 <section id="articleHero" class="section narrow">
     <div class="product-container" style="display: flex;
     flex-wrap: wrap; margin-top: 10%;">
-        <section class="product-2-col" style="width: 46%; flex-grow: 1; margin: 0 1%">
-            <div class="product-image-container" style="text-align: center;">  
-                
-                <div>
-                    <img src="../../images/canvas-ref.jpg" style="display:inline-block; vertical-align: middle;">
-                </div>
-                
-            </div>
-        </section>
         <section class="product-2col" style="width: 46%; flex-grow: 1; margin: 0 1%">
             <header>
                 <h2 class="article-hero-heading" style="text-align: center;">12 x 16 Inch Portrait</h2>
             </header>
-            <div class="price-container" style="display: flex; flex-wrap: wrap; margin: 5% 0">
-                <h3 style="text-align: center; font-size: 14px;">Choose a style:</h3>
+            <div>
+              <span style="
+              margin:20px 0;
+              font-size: 24px;
+              font-weight: 700;
+              color: var(--primary);
+              font-family: var(--serif);
+              width: 100%;
+              max-width: 680px;">Step 1: </span>
+              
+              <input
+              type="hidden"
+              role="uploadcare-uploader"
+              data-images-only="true"
+              data-preview-step="true" />
+            </div>
+            <div>
+              <span style="
+              margin:20px 0;
+              font-size: 24px;
+              font-weight: 700;
+              color: var(--primary);
+              font-family: var(--serif);
+              width: 100%;
+              max-width: 680px;">Step 2: </span>
 
+              <form id="portrait-form">
+                <select
+                required 
+                name="size-select"
+                style="margin-top: 20px; width: 45%">
+                    <option disabled hidden selected>Select canvas size</option>
+                    <option value='08x10'>8" width X 10" height</option>
+                    <option value='09x12'>9" width X 12" height</option>
+                    <option value='11x14'>11" width X 14" height</option>
+                    <option value='12x16'>12" width X 16" height</option>
+                    <option value='16x20'>16" width X 20" height</option>"
+                </select>
+        
+                <div style="margin-bottom: 20px;">
+                <h3 style="margin:20px 0;">Step 3: Select Black & White or Full Color</h3>
+                <label for='bw radio-price1'>
+                    <input type='radio' id='bw' name='color-select' value='BW' required>
+                    Black & White
+                </label><br>
+                <label for='fc radio-price2'>
+                    <input type='radio' id='fc' name='color-select' value='FC' required>
+                    Full Color
+                </label><br>
+                </div>
+              </form>
+            </div>
+      
+            <div class="price-container" style="display: flex; flex-wrap: wrap; margin: 5% 0">
                 <div class="price-2col" style="width: 46%; flex-grow: 1; margin: 5% 1%">
                     <input class="clayer-variant" data-sku-code="12x16BW" type="radio" id="radio-price1" name="radio-price" style="display:none;"  />
                     <label for="radio-price1">
@@ -200,6 +242,7 @@
                 </button>
                 <a
                     href="#"
+                    id="add-portrait"
                     class="clayer-add-to-bag"
                     data-sku-code="12x16BW"
                     data-sku-name="12 x 16 Inch Portrait"
@@ -208,9 +251,19 @@
                 >Link</a>
             </div>   
         </section>
+        <section class="product-2-col" style="width: 46%; flex-grow: 1; margin: 0 1%">
+          <div class="product-image-container" style="text-align: center;">  
+              
+              <div>
+                  <img id="photo-selection" src="../../images/canvas-ref.jpg" style="display:inline-block; vertical-align: middle;">
+              </div>
+              
+          </div>
+      </section>
+
     </div>
     <div style="width: 100%; margin: 5% 1%;">
-        <span style="font-size: 18px; color: grey;">All portraits feature up to two subjects and a simple background, with options to include subjects or detail rich backgrounds for an additional fee. All items are shipped free of charge within the United States. Since this is a custom item, made to order, all sales are final once work begins.</span>
+        <span style="font-size: 18px; color: grey;">All portraits feature up to two subjects and a simple background, with options to include subjects or detail rich backgrounds for an additional fee to be determined before starting work. All items are shipped free of charge within the United States. Since this is a custom item, made to order, all sales are final once work begins.</span>
     </div>
     
 
@@ -285,6 +338,9 @@
     
     <a href="#" class="clayer-shopping-bag-checkout" onload="getOrderId()">Proceed to checkout</a>
 </section>
+
+
+<script src="/js/portraitBuilder.js"></script>
 
 
         

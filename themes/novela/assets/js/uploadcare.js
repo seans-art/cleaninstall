@@ -37,7 +37,9 @@ for (let i = 0; i < colorList.length; i++) {
 function setSku() {
     if(colorChoice && sizeChoice){
         let dataSkuCode = sizeChoice + colorChoice;
+        let productName = dataSkuCode + ' Portrait'
         btnAddToOrder.setAttribute('data-sku-code', dataSkuCode);
+        btnAddToOrder.setAttribute('data-sku-name', productName);
     }
 }
 
@@ -67,12 +69,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Start observing the target node for configured mutations
     observer.observe(uploadWidget, config);
-
-
-
-    uploadWidget.addEventListener('change', function() {
-        if(filename){
-            btnAddToOrder.setAttribute('data-sku-reference', filename);
-        }
-    })    
+    
 }, false);

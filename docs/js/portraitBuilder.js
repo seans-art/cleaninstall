@@ -3,7 +3,7 @@ UPLOADCARE_PUBLIC_KEY = '2281dd5738c1eb6ea46c';
 
 // get a widget reference, locate button element, locate filename from photo upload if available
 const widget = uploadcare.SingleWidget("[role=uploadcare-uploader]");
-const btnAddToOrder = document.getElementById('add-to-order');
+const btnAddToOrder = document.getElementById('add-portrait');
 
 // Select a canvas size and return the selected value
 let sizeChoice;
@@ -37,7 +37,7 @@ for (let i = 0; i < colorList.length; i++) {
 function setSku() {
     if(colorChoice && sizeChoice){
         let dataSkuCode = sizeChoice + colorChoice;
-        let productName = dataSkuCode + ' Portrait'
+        let productName = dataSkuCode + ' Portrait';
         btnAddToOrder.setAttribute('data-sku-code', dataSkuCode);
         btnAddToOrder.setAttribute('data-sku-name', productName);
     }
@@ -54,12 +54,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // Callback function to execute when mutations are observed
     const callback = function(mutationsList, observer) {
         const filename = document.querySelector('#uploadcare--widget__text div')?.innerText;
-        const fileUrl = document.querySelectorAll('[role="uploadcare-uploader"]')[0];    
+        const fileUrl = document.querySelectorAll('[role="uploadcare-uploader"]')[0];
+        const photoSelection = document.getElementById('photo-selection');   
         // Use traditional 'for loops' for IE 11
         for(const mutation of mutationsList) {
             if (mutation.type === 'childList') {
                 btnAddToOrder.setAttribute('data-sku-reference', filename);
                 btnAddToOrder.setAttribute('data-sku-image-url', fileUrl.value);
+                photoSelection.setAttribute('src', fileUrl.value);
             }
         }
     };
