@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="/images/paint-favicon.png">
     
-    <link rel="stylesheet" href="/scss/global.min.0833025f259c63a7286bb14349a88dcbe5cca1035cf7ba5535652d26249a69c4.css">
+    <link rel="stylesheet" href="/scss/global.min.f28364af4775a947fa8c859f0e4838a89e6626d70d256275d982c08f7202a37a.css">
     
     <link rel="stylesheet" href="/css/prism.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -125,133 +125,75 @@
 
         
 <section id="articleHero" class="section narrow">
-    <div class="product-container" style="display: flex;
-    flex-wrap: wrap; margin-top: 10%;">
-        <section class="product-2col" style="width: 46%; flex-grow: 1; margin: 0 1%">
-            <header>
-                <h2 class="article-hero-heading" style="text-align: center;">08 x 10 Inch Portrait</h2>
-            </header>
-            <div>
-              <span style="
-              margin:20px 0;
-              font-size: 24px;
-              font-weight: 700;
-              color: var(--primary);
-              font-family: var(--serif);
-              width: 100%;
-              max-width: 680px;">Step 1: </span>
-              
+  <header>
+      <h1 class="portrait-title">08 x 10 Inch Portrait</h1>
+  </header>
+    <div class="product-container">
+        <section>
+            <div class="step-row">
+              <span>Step 1: </span>
               <input
               type="hidden"
               role="uploadcare-uploader"
               data-images-only="true"
               data-preview-step="true" />
             </div>
-            <div>
-              <span style="
-              margin:20px 0;
-              font-size: 24px;
-              font-weight: 700;
-              color: var(--primary);
-              font-family: var(--serif);
-              width: 100%;
-              max-width: 680px;">Step 2: </span>
-
+            <div class="step-row">
+              <span>Step 2: </span>
+              <select
+              required 
+              name="size-select"
+              style="width: 45%; margin-left: -5px;">
+                  <option disabled hidden selected>Select canvas size</option>
+                  <option value='08x10'>8" width X 10" height</option>
+                  <option value='09x12'>9" width X 12" height</option>
+                  <option value='11x14'>11" width X 14" height</option>
+                  <option value='12x16'>12" width X 16" height</option>
+                  <option value='16x20'>16" width X 20" height</option>"
+              </select>
+            </div>
+            <div class="step-row">
+              <span>Step 3: Select One</span>
               <form id="portrait-form">
-                <select
-                required 
-                name="size-select"
-                style="margin-top: 20px; width: 45%">
-                    <option disabled hidden selected>Select canvas size</option>
-                    <option value='08x10'>8" width X 10" height</option>
-                    <option value='09x12'>9" width X 12" height</option>
-                    <option value='11x14'>11" width X 14" height</option>
-                    <option value='12x16'>12" width X 16" height</option>
-                    <option value='16x20'>16" width X 20" height</option>"
-                </select>
-        
-                <div style="margin-bottom: 20px;">
-                <h3 style="margin:20px 0;">Step 3: Select Black & White or Full Color</h3>
-                <label for='bw radio-price1'>
-                    <input type='radio' id='bw' name='color-select' value='BW' required>
-                    Black & White
-                </label><br>
-                <label for='fc radio-price2'>
-                    <input type='radio' id='fc' name='color-select' value='FC' required>
-                    Full Color
-                </label><br>
+                <div class="color-option-container">
+                  <section class="color-option">
+                    <label for='bw'>
+                      <input type='radio' id='bw' name='color-select' value='BW' required>
+                      <div id="bwselect">
+                          <img src="../../images/checkerboard.svg">
+                          <h5>Black & White</h5>
+                      </div>
+                    </label>
+                  </section>
+
+                  <section class="color-option">
+                    <label for='fc'>
+                      <input type='radio' id='fc' name='color-select' value='FC' required>
+                      <div id="fcselect">
+                          <img src="../../images/colorwheel.svg">
+                          <h5>Full Color</h5>
+                      </div>
+                    </label>
+                  </section>
                 </div>
               </form>
             </div>
-      
-            <div class="price-container" style="display: flex; flex-wrap: wrap; margin: 5% 0">
-                <div class="price-2col" style="width: 46%; flex-grow: 1; margin: 5% 1%">
-                    <input class="clayer-variant" data-sku-code="08x10BW" type="radio" id="radio-price1" name="radio-price" style="display:none;"  />
-                    <label for="radio-price1">
-                        <section>
-                            <div id="logo-desktop" style="display: flex; justify-content: center; margin-bottom: 5%;">
-                                
-                                <img src="../../images/checkerboard.svg" style="width: 75px;">
-                            </div>
-                            <h4 style="text-align:center;">Black & White:</h4>
-                            <div class="clayer-price" data-sku-code="08x10BW">
-                                <h6 class="amount" style="text-align: center;"></h6>
-                                <h6 class="compare-at-amount" style="text-align: center;"></h6>
-                            </div>
-                        </section>
-                    </label>               
-                </div>
-                <div class="price-2col" style="width: 46%; flex-grow: 1; margin: 5% 1%">
-                    <input class="clayer-variant" data-sku-code="08x10FC" type="radio" id="radio-price2" name="radio-price" style="display:none;" />
-                    <label for="radio-price2">
-                        <section>
-                            <div style="display: flex; justify-content: center; margin-bottom: 5%;">
-                                <img src="../../images/colorwheel.svg" style="width: 75px;">
-                            </div>
-                            <h4 style="text-align: center;">Full Color:</h4>
-                            
-                            <div class="clayer-price" data-sku-code="08x10FC">
-                                <h6 class="amount" style="text-align: center;"></h6>
-                                <h6 class="compare-at-amount" style="text-align: center;"></h6>
-                            </div>
-                        </section>
-                    </label>                 
-                </div>
-            </div>
+            <div class="step-row">
             
-            <div style="text-align:center;">
+              <span>Step 4: </span>
                 
-                
-                <button style="  background-color: royalblue; /* Green */
-                border: none;
-                color: white;
-                padding: 15px 32px;
-                align-items: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;"
-                href="#"
-                class="clayer-add-to-bag"
-                data-sku-code="08x10BW"
-                data-sku-name="08 x 10 Inch Portrait"
-                data-sku-reference="Any reference"
-                data-sku-image-url="../../images/canvas-ref.jpg"
-                data-availability-message-container-id="availability-message"
-                >
-                    Add to Cart
-                </button>
                 <a
-                    href="#"
-                    id="add-portrait"
-                    class="clayer-add-to-bag"
-                    data-sku-code="08x10BW"
-                    data-sku-name="08 x 10 Inch Portrait"
-                    data-sku-reference="Any reference"
-                    data-availability-message-container-id="availability-message-BABYONBU000000E63E74NBXX"
-                >Link</a>
-            </div>   
+                href="#"
+                id="add-portrait"
+                class="clayer-add-to-bag"
+                data-sku-code="Select color and size to update SKU code"
+                data-sku-name="08 x 10 Inch Portrait"
+                data-sku-reference="Upload a photo for reference"
+                >Add to Cart</a>
+                <p>Note: limit 1 photo per canvas size and color choice</p>  
+            </div>
         </section>
-        <section class="product-2-col" style="width: 46%; flex-grow: 1; margin: 0 1%">
+        <section>
           <div class="product-image-container" style="text-align: center;">  
               
               <div>

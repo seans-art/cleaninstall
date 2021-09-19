@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function () {
 // import uploadcare from '../../node_modules/uploadcare-widget/uploadcare.js';
 UPLOADCARE_PUBLIC_KEY = '2281dd5738c1eb6ea46c';
 
@@ -17,16 +18,35 @@ function selectSize(){
 }
 document.getElementsByName('size-select')[0].onchange = selectSize;
 
-// Select a color type and return the selected value
-let colorList = document.getElementsByName('color-select');
-let previous = null;
-let colorChoice;
-for (let i = 0; i < colorList.length; i++) {
-    colorList[i].addEventListener('change', function() {
-        if (this !== previous) {
-            previous = this;
+// Get selected color type and return the selected value
+let ColorListInputs = document.getElementsByName('color-select');
+let previousInput = null;
+let colorOptionIds= ['bwselect', 'fcselect'];
+let previousSelected = null;
+for (let i = 0; i < ColorListInputs.length; i++) {
+    ColorListInputs[i].addEventListener('change', function() {
+        // Loop through color options by ID
+        let colorSelected = document.getElementById(colorOptionIds[i]);
+        // Null check whether a value selection has been made
+        if (this !== previousInput) {
+            previousInput = this;
         }
+        // The Value we apply to the SKU, and class added
         colorChoice = this.value;
+        colorSelected.classList.add('.color-selected');
+
+        // Null check the id selection has been made
+        if(previousSelected){
+            previousSelected.classList.remove('.color-selected');
+        }
+        // Set the previousSelection only after changing class application
+        console.log('before: ' + previousSelected);
+        previousSelected = document.getElementById(colorOptionIds[i]);
+        console.log('after: ' + previousSelected);
+
+
+        console.log(colorSelected);
+        console.log(colorChoice);
         if(colorChoice && sizeChoice){
             setSku();
         }
@@ -44,7 +64,6 @@ function setSku() {
 }
 
 // Set Order Reference to Photo filename
-document.addEventListener('DOMContentLoaded', function () {
     // Our Target Node to watch for Mutations
     const uploadWidget = document.querySelector('#uploadcare--widget__text');
   
