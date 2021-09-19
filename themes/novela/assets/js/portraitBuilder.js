@@ -18,35 +18,19 @@ function selectSize(){
 }
 document.getElementsByName('size-select')[0].onchange = selectSize;
 
+
 // Get selected color type and return the selected value
 let ColorListInputs = document.getElementsByName('color-select');
 let previousInput = null;
-let colorOptionIds= ['bwselect', 'fcselect'];
-let previousSelected = null;
 for (let i = 0; i < ColorListInputs.length; i++) {
     ColorListInputs[i].addEventListener('change', function() {
-        // Loop through color options by ID
-        let colorSelected = document.getElementById(colorOptionIds[i]);
         // Null check whether a value selection has been made
         if (this !== previousInput) {
             previousInput = this;
         }
         // The Value we apply to the SKU, and class added
         colorChoice = this.value;
-        colorSelected.classList.add('.color-selected');
 
-        // Null check the id selection has been made
-        if(previousSelected){
-            previousSelected.classList.remove('.color-selected');
-        }
-        // Set the previousSelection only after changing class application
-        console.log('before: ' + previousSelected);
-        previousSelected = document.getElementById(colorOptionIds[i]);
-        console.log('after: ' + previousSelected);
-
-
-        console.log(colorSelected);
-        console.log(colorChoice);
         if(colorChoice && sizeChoice){
             setSku();
         }
