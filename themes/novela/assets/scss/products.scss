@@ -26,6 +26,7 @@
     }
     p {
         margin-top: 10px;
+        color: grey;
     }
 }
 .color-option-container {
@@ -81,4 +82,12 @@ input[type="radio"]:checked + label div{
 
 .uploadcare--widget__file-size {
     color: grey;
+}
+
+.uploadcare--widget__text {
+    color: grey;
+}
+
+.uploadcare--link {
+    font-size: 18px;
 }
