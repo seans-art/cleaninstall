@@ -109,29 +109,21 @@
 }
 
 .nav-container{
+    padding-top: 5%;
     position: relative;
     z-index: 100;
-    padding-top: 100px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-}
-
-@media screen and (max-height: 800px) {
-    .nav-container{
-        padding-top: 50px;
+    @media screen and (max-width: $phablet){
+        
     }
 }
 
-/*DESKTOP MEDIUM*/
-@media screen and (max-width: 1280px){
-    .nav-container{
-        padding-top: 50px;
-    }
-}
+
 
 .logo-link{
     position: relative;

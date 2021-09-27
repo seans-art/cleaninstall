@@ -26,6 +26,10 @@
     @media screen and (max-width: $phablet){
       margin-bottom: 30px;
     }
+    /*SMALL PHONE*/
+    @media screen and (max-width: 540px){
+      margin-top: 25%;
+    }
 }
 
 .grid-controls-container{
@@ -43,26 +47,27 @@
 }
 
 .heading-container{
-    margin: 100px 0;
-    display: table;
-    clear: both;
-    
-    .column {
-      max-width: 50%;
-      float: left;
-    }
+  margin: 5% 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
     
     /*DESKTOP*/
     @media screen and (max-width: $tablet){
-      margin: 10px 0 110px;
-      width: 100%;
+      flex-direction: column;
+      div {
+        justify-content: center;
+      }
+      img {
+        max-width: 100%;
+      }
     }
   
     /*TABLET*/
     @media screen and (max-width: $phablet){
-        width: 100%;
+      margin: 5% 0 0 0;
+
         .column {
-          max-width: 100%;
           margin: 10px auto;
         }
     }
@@ -83,16 +88,17 @@
     }
   
     /*PHABLET*/
-    @media screen and (max-width: $phablet){
-      font-size: 18px;
-      line-height: 25px;
+    @media screen and (max-width: $tablet){
+      font-size: 4rem;
+      line-height: 4.5rem;
       margin: 0;
       text-align: center;
+      margin-top: 4%;;
     }
 }
 
 .square-app-button-wrapper {
-  position: relative;
+  display: flex;
 
   .square-app-button {
     background-color: #157cfc;
@@ -116,7 +122,9 @@
         position: absolute;
         left: 4rem;
         right: 4rem;
-        font-size: 10px
+        text-align: center;
+        font-size: 1.3rem;
+        margin: 5% 0;
     }
   }
 }

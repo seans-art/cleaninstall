@@ -26,7 +26,7 @@
     }
     p {
         margin-top: 10px;
-        color: grey;
+        color: var(--primary);
     }
 }
 .color-option-container {
@@ -81,11 +81,11 @@ input[type="radio"]:checked + label div{
 }
 
 .uploadcare--widget__file-size {
-    color: grey;
+    color: var(--primary);
 }
 
 .uploadcare--widget__text {
-    color: grey;
+    color: var(--primary);
 }
 
 .uploadcare--link {

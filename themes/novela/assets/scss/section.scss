@@ -26,9 +26,9 @@
     
 }
 
-.layout-styled .section {
-    @media screen and (max-width: $phablet){
-        margin-top: -10%;
+.section {
+    @media screen and (max-width: $tablet){
+        max-width: none;
     }
 }
 
