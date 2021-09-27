@@ -4,7 +4,7 @@
       <h1 class="portrait-title">{{ .Page.Params.Title }}</h1>
   </header>
     <div class="product-container">
-        <section>
+        <section class="product-column">
             <div class="step-row">
               <span>Step 1: </span>
               <input
@@ -69,7 +69,7 @@
                 <p>Note: limit 1 photo per canvas size and color choice</p>  
             </div>
         </section>
-        <section>
+        <section class="product-column">
           <div class="product-image-container" style="text-align: center;">  
               {{ with .Page.Params.hero }}
               <div>

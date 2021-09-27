@@ -33,7 +33,16 @@
         section:last-child #photo-selection {
             width: 75%;
         }
-
+        .color-option-container {
+            flex-direction: column;
+            .color-option {
+                margin-left: 0;
+                width: 80%;
+            }
+            .color-option:last-child {
+                margin: -5% 0;
+            }
+        }
     }
 }
 
