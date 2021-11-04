@@ -3,7 +3,7 @@
 table{
     position: relative;
     line-height: 1.65;
-    color: var(--grey);
+    color: var(--primary);
     font-family: var(--sanserif);
     -webkit-transition: var(--color-mode-transition);
     -o-transition: var(--color-mode-transition);
@@ -84,7 +84,7 @@ thead{
 
 th{
     border-right: 1px solid var(--horizontalRule);
-    padding: 15px 30px;
+    padding: 15px 10px;
 
     &:last-child {
         border-right: none;
@@ -104,4 +104,41 @@ th{
     th{
         font-size: 14px;
     }
+}
+
+.cart-col {
+    column-span: 2;
+}
+
+/* Phone view for portrait builder itemized cart */
+.item-table thead { display: none; }
+.item-table tbody { 
+    display: block; 
+    flex-direction: row;
+    width: 100%;
+}
+.item-table tbody tr {
+    display: flex; 
+    flex-direction: row;
+    width: 100%;
+}
+.item-table tbody tr th::before, table tbody tr td::before{
+    content: attr(data-title); 
+    display: block;
+    margin: 1% 0;
+}
+.cart-line-item {
+    display: flex;
+    flex-direction: row;
+}
+[data-title="Qty"] select {
+    color: black;
+}
+@media screen and (max-width: 850px) {
+    .item-table {
+        max-width: 486px;
+    }
+    .item-table tbody, .item-table tbody tr { 
+        flex-direction: column;
+    }    
 }

@@ -7,4 +7,4 @@ redirect: https://www.instagram.com/seanosmo/
 authors: 
     - Sean O'Brien
 ---
-The quick brown fox jumped over the lazy dog.
+

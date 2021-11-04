@@ -12,7 +12,9 @@
     /*PHABLET*/
     @media screen and (max-width: 540px){
         max-width: 100%;
-        padding: 2rem;;
+        padding: 0 2rem;
+        margin-top: -5%;
+        padding-bottom: 3%;
     }
 
     p{
@@ -26,9 +28,9 @@
     
 }
 
-.layout-styled .section {
-    @media screen and (max-width: $phablet){
-        margin-top: -10%;
+.section {
+    @media screen and (max-width: $tablet){
+        max-width: none;
     }
 }
 

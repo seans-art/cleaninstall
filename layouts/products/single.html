@@ -4,7 +4,7 @@
       <h1 class="portrait-title">{{ .Page.Params.Title }}</h1>
   </header>
     <div class="product-container">
-        <section>
+        <section class="product-column">
             <div class="step-row">
               <span>Step 1: </span>
               <input
@@ -17,8 +17,7 @@
               <span>Step 2: </span>
               <select
               required 
-              name="size-select"
-              style="width: 45%; margin-left: -5px;">
+              name="size-select">
                   <option disabled hidden selected>Select canvas size</option>
                   <option value='08x10'>8" width X 10" height</option>
                   <option value='09x12'>9" width X 12" height</option>
@@ -69,7 +68,7 @@
                 <p>Note: limit 1 photo per canvas size and color choice</p>  
             </div>
         </section>
-        <section>
+        <section class="product-column">
           <div class="product-image-container" style="text-align: center;">  
               {{ with .Page.Params.hero }}
               <div>
@@ -81,15 +80,16 @@
 
     </div>
     <div style="width: 100%; margin: 5% 1%;">
-        <span style="font-size: 18px; color: grey;">All portraits feature up to two subjects and a simple background, with options to include subjects or detail rich backgrounds for an additional fee to be determined before starting work. Since this is a custom item, made to order, all sales are final once work begins.</span>
+        <span style="font-size: 18px; color: var(--primary);">All portraits feature up to two subjects and a simple background, with options to include subjects or detail rich backgrounds for an additional fee to be determined before starting work. Since this is a custom item, made to order, all sales are final once work begins.</span>
     </div>
     <!-- Shopping Bag -->
+    <h3 style="margin-left: 0;">Shopping Cart:</h3>
 
     <div id="clayer-shopping-bag-container">
-      <table class="table is-fullwidth">
+      <table class="table is-fullwidth item-table">
         <thead>
           <tr>
-            <th colspan="2">SKU</th>
+            <th>SKU</th>
             <th>Reference</th>
             <th>Unit price</th>
             <th>Qty</th>
@@ -100,21 +100,21 @@
         <tbody id="clayer-shopping-bag-items-container">
         </tbody> 
         <template id="clayer-shopping-bag-item-template">
-          <tr>
-            <td>
+          <tr class="cart-line-item">
+            <td data-title="Selected Image">
               <img class="clayer-shopping-bag-item-image"></img>
             </td>
-            <td class="clayer-shopping-bag-item-name"></td>
-            <td class="clayer-shopping-bag-item-reference"></td>
-            <td class="clayer-shopping-bag-item-unit-amount"></td>
-            <td class="clayer-shopping-bag-item-qty-container">
+            <td data-title="Name" class="clayer-shopping-bag-item-name"></td>
+            <td data-title="Reference" class="clayer-shopping-bag-item-reference"></td>
+            <td data-title="Price" class="clayer-shopping-bag-item-unit-amount"></td>
+            <td data-title="Qty" class="clayer-shopping-bag-item-qty-container">
               <!-- The unavailable message template is appended to the element
                     below if customer selects a quantity that is not available  -->
               <span class="clayer-shopping-bag-item-availability-message-container"></span>
             </td>
-            <td class="clayer-shopping-bag-item-total-amount"></td>
+            <td data-title="Item Total" class="clayer-shopping-bag-item-total-amount"></td>
             <td>
-              <a href="#" class="clayer-shopping-bag-item-remove">remove</a>
+              <a href="#" class="clayer-shopping-bag-item-remove">Remove</a>
             </td>
           </tr>
         </template>
