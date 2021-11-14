@@ -8,3 +8,5 @@ authors:
 ---
 
 ![did.jpg](../../images/did.jpg)
+![kuniko.jpg](../../images/kuniko.jpg)
+![nanas-dog.jpg](../../images/nanas-dog.jpg)
