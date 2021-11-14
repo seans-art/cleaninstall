@@ -8,6 +8,8 @@ Note: If it doesn't work in one terminal you can use the drop down arrow to sele
 
 ## Update Content
 On left side of VS Code click the page Icon (File Explorer). Upload your photos under `/static/images`.
+Next include the filename and path into the respective content file ie:`family-portraits.md`
+Refer to existing examples.
 
 In the terminal, run these commands:
 
